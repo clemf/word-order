@@ -48,7 +48,7 @@ $(document).ready(function() {
     var orderedWords = wordOrder(input);
 
     orderedWords.forEach(function(word) {
-      $("#word").append("<li>" + word + "</li>");
+      $("#word").append("<li class=\"list-group-item\">" + word + "</li>");
     });
     $("#result").show();
     event.preventDefault();
