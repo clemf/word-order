@@ -42,6 +42,7 @@ var wordOrder = function(input) {
 };
 
 $(document).ready(function() {
+  $("#result").hide();
   $("form#word-order").submit(function(event) {
     var input = $("input#input").val()
     var orderedWords = wordOrder(input);
@@ -49,7 +50,7 @@ $(document).ready(function() {
     orderedWords.forEach(function(word) {
       $("#word").append("<li>" + word + "</li>");
     });
-
+    $("#result").show();
     event.preventDefault();
   });
 });
