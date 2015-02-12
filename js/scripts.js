@@ -7,7 +7,7 @@ WordCount.prototype = new WordCount();
 
 var wordOrder = function(input) {
 
-  var wordSplit = input.split(" "),
+  var wordSplit = input.toLowerCase().split(" "),
       uniqueWords = [];
 
   var wordSearch = function(word) {
@@ -28,13 +28,9 @@ var wordOrder = function(input) {
     }
   });
 
-  // console.log("uniqueWords = :", uniqueWords)
-
   var sorted = uniqueWords.sort(function(a,b) {
     return b.count - a.count;
   });
-
-  // console.log("sorted = ", sorted)
 
   var result = [];
 

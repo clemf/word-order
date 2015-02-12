@@ -11,4 +11,9 @@ describe('wordOrder', function() {
   it('returns words ordered by number of appearances', function() {
     expect(wordOrder("hello world world")).to.eql(["world", "hello"]);
   });
+
+  it('ignores case of input', function() {
+    expect(wordOrder("Hello hello")).to.eql(["hello"]);
+  });
+  
 });
