@@ -7,5 +7,8 @@ describe('wordOrder', function() {
   it('takes two words and returns them in an array', function() {
     expect(wordOrder("hello world")).to.eql(["hello", "world"]);
   });
-  
+
+  it('returns words ordered by number of appearances', function() {
+    expect(wordOrder("hello world world")).to.eql(["world", "hello"]);
+  });
 });
