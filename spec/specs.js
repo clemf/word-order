@@ -23,4 +23,9 @@ describe('wordOrder', function() {
   it('removes multiple spaces from input', function() {
     expect(wordOrder("Hello  world")).to.eql(["hello", "world"]);
   });
+
+  it('removes leading and trailing whitespace', function() {
+    expect(wordOrder(" hello world ")).to.eql(["hello", "world"]);
+  });
+
 });
