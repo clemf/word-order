@@ -15,5 +15,9 @@ describe('wordOrder', function() {
   it('ignores case of input', function() {
     expect(wordOrder("Hello hello")).to.eql(["hello"]);
   });
+
+  it('removes punctuation from input', function() {
+    expect(wordOrder("Hello, world?")).to.eql(["hello", "world"]);
+  });
   
 });
