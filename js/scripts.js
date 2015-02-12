@@ -40,3 +40,16 @@ var wordOrder = function(input) {
 
   return result;
 };
+
+$(document).ready(function() {
+  $("form#word-order").submit(function(event) {
+    var input = $("input#input").val()
+    var orderedWords = wordOrder(input);
+
+    orderedWords.forEach(function(word) {
+      $("#word").append("<li>" + word + "</li>");
+    });
+
+    event.preventDefault();
+  });
+});
