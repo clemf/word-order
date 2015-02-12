@@ -7,10 +7,8 @@ WordCount.prototype = new WordCount();
 
 var wordOrder = function(input) {
 
-  var inputText = input.toLowerCase(),
-      uniqueWords = [];
-
-  var wordSplit = inputText.replace(/[!-@]/g, "").split(" ");
+  var wordSplit = input.toLowerCase().replace(/[!-@]/g, "").split(/\s+/);
+  var uniqueWords = [];
 
   var wordSearch = function(word) {
     for(var i = 0; i < uniqueWords.length; i++) {

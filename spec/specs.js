@@ -19,5 +19,8 @@ describe('wordOrder', function() {
   it('removes punctuation from input', function() {
     expect(wordOrder("Hello, world?")).to.eql(["hello", "world"]);
   });
-  
+
+  it('removes multiple spaces from input', function() {
+    expect(wordOrder("Hello  world")).to.eql(["hello", "world"]);
+  });
 });
